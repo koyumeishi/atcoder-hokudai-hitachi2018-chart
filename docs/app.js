@@ -29,8 +29,8 @@ class ChartApp{
   parseData(dataTable){
     const rows = dataTable.getNumberOfRows();
     for(let r=1; r<rows; r++){
-      userName = dataTable.getValue(r, 0);
-      data = dataTable.getValue(r, 1);
+      let userName = dataTable.getValue(r, 0);
+      let data = dataTable.getValue(r, 1);
       this.scoreData[userName] = JSON.parse(data);
     }
     // scoreData = {userName: {score:time, score:time, ... }}
